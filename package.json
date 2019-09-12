@@ -1,0 +1,28 @@
+{
+  "name": "facerecog",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "devel": "cross-env node_env=../develConfig.js node ./bin/www",
+    "start": "cross-env node_env=../develConfig.js nodemon ./bin/www"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs-node-gpu": "^1.2.9",
+    "blob": "0.0.5",
+    "canvas": "^2.5.0",
+    "canvas-to-image": "^2.0.3",
+    "cookie-parser": "~1.4.4",
+    "cross-env": "^5.2.0",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "face-api.js": "^0.20.1",
+    "fs-extra": "^8.1.0",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "node-fetch": "^2.6.0",
+    "nodemon": "^1.19.1",
+    "path": "^0.12.7",
+    "rn-fetch-blob": "^0.10.16"
+  }
+}

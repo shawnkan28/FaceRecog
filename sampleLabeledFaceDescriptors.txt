@@ -1,0 +1,94 @@
+[ LabeledFaceDescriptors {
+    _label: 'pins_Chris Evans',
+    _descriptors:
+     [ [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array] ] },
+  LabeledFaceDescriptors {
+    _label: 'pins_Jeremy Renner',
+    _descriptors:
+     [ [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array] ] },
+  LabeledFaceDescriptors {
+    _label: 'pins_Paul Rudd',
+    _descriptors:
+     [ [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array] ] },
+  LabeledFaceDescriptors {
+    _label: 'pins_Scarlett Johansson',
+    _descriptors:
+     [ [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array] ] },
+  LabeledFaceDescriptors {
+    _label: 'pins_robert downey jr face',
+    _descriptors:
+     [ [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array],
+       [Float32Array] ] } ]
+
+============================================================
+
+[ LabeledFaceDescriptors {
+    _label: 'pins_Chris Evans',
+    _descriptors: [ [Float32Array], [Float32Array] ] },
+  LabeledFaceDescriptors {
+    _label: 'pins_Jeremy Renner',
+    _descriptors: [ [Float32Array], [Float32Array] ] },
+  LabeledFaceDescriptors {
+    _label: 'pins_Paul Rudd',
+    _descriptors: [ [Float32Array], [Float32Array] ] },
+  LabeledFaceDescriptors {
+    _label: 'pins_Scarlett Johansson',
+    _descriptors: [ [Float32Array] ] },
+  LabeledFaceDescriptors {
+    _label: 'pins_robert downey jr face',
+    _descriptors: [ [Float32Array], [Float32Array] ] } ]
+
