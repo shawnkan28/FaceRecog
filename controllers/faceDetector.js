@@ -19,7 +19,7 @@ function controller(){
 
 controller.prototype.detectFace = async function(recognitionData){
   try{
-    const imageName = 'keanu.jpg';
+    const imageName = 'tset.pgm';
     await faceapi.nets.ssdMobilenetv1.loadFromDisk(MODELS_URL);
     await faceapi.nets.faceLandmark68Net.loadFromDisk(MODELS_URL);
     await faceapi.nets.faceRecognitionNet.loadFromDisk(MODELS_URL);
