@@ -1,11 +1,15 @@
 'use strict'
-global.Blob = require('blob');
+
+global.Blob = require('blob'),
+global.CUDA_VISIBLE_DEVICES="-1";
+
 const env = require(process.env.NODE_ENV),
       faceapi = require('face-api.js'),
       canvas = require('canvas'),
       path = require('path'),
       fetch = require('node-fetch'),
       fs = require('fs-extra'),
+      tf = require('@tensorflow/tfjs-node'),
       MODELS_URL = path.join(__dirname, '/../public/models/');
 
 function controller(){
@@ -15,10 +19,11 @@ function controller(){
 
 controller.prototype.detectFace = async function(recognitionData){
   try{
-    const imageName = 'scarjo.jpg';
+    const imageName = 'keanu.jpg';
     await faceapi.nets.ssdMobilenetv1.loadFromDisk(MODELS_URL);
     await faceapi.nets.faceLandmark68Net.loadFromDisk(MODELS_URL);
     await faceapi.nets.faceRecognitionNet.loadFromDisk(MODELS_URL);
+    await faceapi.tf.setBackend('tensorflow');
     const labeledFaceDescriptors = await recogData(recognitionData);
     const faceMatcher = new faceapi.FaceMatcher(labeledFaceDescriptors, 0.6);
     const img = await canvas.loadImage(env.images+imageName);
@@ -27,6 +32,12 @@ controller.prototype.detectFace = async function(recognitionData){
     faceapi.matchDimensions(canvas1, displaySize);
     const detections = await faceapi.detectAllFaces(img).withFaceLandmarks().withFaceDescriptors();
     const resizedDetections = faceapi.resizeResults(detections, displaySize);
+    for(let i=0;i<labeledFaceDescriptors.length;i++){
+      for(let j=0;j<labeledFaceDescriptors[i]._descriptors.length;j++){
+        const dist = faceapi.euclideanDistance(resizedDetections[0].descriptor, labeledFaceDescriptors[i]._descriptors[j]);
+        console.log("comparing with "+j+" of "+labeledFaceDescriptors[i]._label+" data: "+dist);
+      }
+    }
     const results = resizedDetections.map(d => faceMatcher.findBestMatch(d.descriptor));
     results.forEach((result, i) => {
       const box = resizedDetections[i].detection.box;
