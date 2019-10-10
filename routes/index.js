@@ -23,7 +23,7 @@ router.get('/', function(req, res, next) {
     labeledDescriptor.push(obj);
   });
 
-  cont.detectFace(labeledDescriptor).then(function(data){
+  cont.detectFace(labeledDescriptor, "scarjolookalike.jpg").then(function(data){
     const image = '/images/'+data.image;
     res.render('index', { title: 'Express', box: data.canvas, image: image });
   }).catch(function(err){

@@ -17,9 +17,8 @@ function controller(){
   faceapi.env.monkeyPatch({ Canvas, Image, ImageData, fetch });
 }
 
-controller.prototype.detectFace = async function(recognitionData){
+controller.prototype.detectFace = async function(recognitionData, imageName){
   try{
-    const imageName = 'tset.pgm';
     await faceapi.nets.ssdMobilenetv1.loadFromDisk(MODELS_URL);
     await faceapi.nets.faceLandmark68Net.loadFromDisk(MODELS_URL);
     await faceapi.nets.faceRecognitionNet.loadFromDisk(MODELS_URL);
