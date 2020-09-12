@@ -20,7 +20,7 @@
     "fs-extra": "^8.1.0",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "nodemon": "^1.19.1",
     "path": "^0.12.7",
     "rn-fetch-blob": "^0.10.16"
