@@ -1,3 +1,3 @@
 # FaceRecog
 
-Test project
+Testing Face Recognition nodejs library
